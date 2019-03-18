@@ -1,0 +1,11 @@
+﻿@model Student
+
+ 
+<section>
+    <h3>
+        @Model.Name @{ if (@Model.Gender == Person.GenderType.Male)
+        { <text>(M)</text>}
+    else
+    {<text>(V)</text> } }
+    </h3> <div>@Model.Email</div> <div><a asp-action="details" asp-controller="student" asp-route-id="@Model.Id">Meer detail</a></div>
+</section>
